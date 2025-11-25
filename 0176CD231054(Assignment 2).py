@@ -1,11 +1,10 @@
-
 students = {}     
 logged_user = ''  
 logged = False    
 
 def register():
     global students
-    print("\n Student Registration ")
+    print(" Student Registration ")
 
     username = input("Enter Username-").strip()
     if username in students:
@@ -37,12 +36,12 @@ def register():
         "gender": gender
     }
 
-    print("\n Registration Successful! You can now login.")
+    print("Registration Successful! You can now login.")
 
 
 def login():
     global logged, logged_user
-    print("\n Student Login")
+    print("Student Login")
 
     if logged:
         print("You are already logged in as", logged_user)
@@ -61,7 +60,7 @@ def login():
 
 def show_profile():
     global logged, logged_user
-    print("\n Student Profile ")
+    print(" Student Profile ")
 
     if not logged:
         print("Please login first to view profile.")
@@ -75,7 +74,7 @@ def show_profile():
 
 def update_profile():
     global logged, logged_user
-    print("\n Update Profile")
+    print("Update Profile")
 
     if not logged:
         print("Please login first to update profile.")
@@ -91,22 +90,22 @@ def update_profile():
         if new_value:
             profile[key] = new_value
 
-    print("\n Profile Updated Successfully")
+    print(" Profile Updated Successfully")
 
 
 def logout():
     global logged, logged_user
     if not logged:
-        print("\n No user is currently logged in.")
+        print(" No user is currently logged in.")
         return
 
-    print(f"\n{students[logged_user]['name']} has been logged out successfully.")
+    print(f"{students[logged_user]['name']} has been logged out successfully.")
     logged = False
     logged_user = ''
 
 
 def terminate():
-    print("\n Exiting the LNCT Student System.")
+    print(" Exiting the LNCT Student System.")
     exit()
 
 def main():
@@ -137,7 +136,7 @@ def main():
         elif choice == '5':
             logout()
         elif choice == '6':
-            print("\nReturning to Main Menu.")
+            print("Returning to Main Menu.")
             continue
         elif choice == '7':
             terminate()
@@ -145,3 +144,4 @@ def main():
             print(" Invalid choice! Please select from 1 to 7.")
 
 main()
+
